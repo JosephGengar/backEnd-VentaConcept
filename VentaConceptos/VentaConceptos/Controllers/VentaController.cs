@@ -13,6 +13,32 @@ namespace VentaConceptos.Controllers
     [ApiController]
     public class VentaController : ControllerBase
     {   
+        [HttpGet]
+        public IActionResult Devolver()
+        {
+            ResponseView oResp = new ResponseView();
+            try
+            {
+                using (SimpleVentaContext db = new SimpleVentaContext())
+                {
+                    var oVentas = (from d in db.TVenta
+                                   select d).ToList();
+                    if (oVentas.Count > 0)
+                    {
+                        oResp.Exito = 1;
+                        oResp.Mensajes = "exito";
+                        oResp.Data = oVentas;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                oResp.Exito = 0;
+                oResp.Mensajes = ex.Message;
+            }
+            return Ok(oResp);
+        }
+
         [HttpPost]
         public IActionResult Agregar(VentaView model)
         {
