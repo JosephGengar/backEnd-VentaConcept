@@ -15,6 +15,7 @@ namespace VentaConceptos
 {
     public class Startup
     {
+        public string MiCors = "MiCors";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,6 +27,14 @@ namespace VentaConceptos
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options => {
+                options.AddPolicy(name: MiCors,
+                builder =>
+                    {
+                        builder.WithOrigins("*"); builder.WithHeaders("*");
+                    }
+                );
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +48,8 @@ namespace VentaConceptos
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(MiCors);
 
             app.UseAuthorization();
 
