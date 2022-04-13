@@ -16,6 +16,8 @@ Muestra con Postman de los datos que envia la api:
 
 ![ventCon1](https://user-images.githubusercontent.com/102115164/163210776-dc79a841-2a20-4b61-971d-1cf936497440.png)
 
+Envio de datos a traves de un modelo y respuesta correspondiente:
+
 ![venCon2](https://user-images.githubusercontent.com/102115164/163210809-64c991fb-139d-4003-9e32-0fb83dd2844a.png)
 
 
