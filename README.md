@@ -1,6 +1,7 @@
 ## BackEnd del Proyecto VentasConcept
 
-Este proyecto es una api hecha en C#, la cual es consumida por el proyecto en angular de VentasConcept, en esta api se envia un objeto
+Este proyecto es una api hecha en C#, la cual es consumida por el proyecto en angular de VentasConcept, permite agregar ventas con conceptos 
+diferentes e ir recibiendo y mostrando los datos en una tabla, en esta api se puede recibir un modelo y envia un objeto
 que contiene 3 propiedades:
 
 exito: que puede ser 0 para un error y 1 para confirmar la respuesta correcta.
@@ -18,3 +19,4 @@ Muestra con Postman de los datos que envia la api:
 ![venCon2](https://user-images.githubusercontent.com/102115164/163210809-64c991fb-139d-4003-9e32-0fb83dd2844a.png)
 
 
+Tecnologias Utilizadas: Lenguaje C# con Visual Studio Net Core, Entity Framework, SqlServer y Postman.
