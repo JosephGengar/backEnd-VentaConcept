@@ -4,7 +4,9 @@ Este proyecto es una api hecha en C#, la cual es consumida por el proyecto en an
 que contiene 3 propiedades:
 
 exito: que puede ser 0 para un error y 1 para confirmar la respuesta correcta.
+
 data: que puede contener cualquier objeto de este tipo, en este caso se va a llenar de una coleccion de datos.
+
 mensajes: que es una propiedad extra, si queremos recibir un mensaje expecifico dependiendo de la respuesta.
 
 Proyecto en Angular que consume la api: https://github.com/JosephGengar/Front-Ang-VentasConcept
